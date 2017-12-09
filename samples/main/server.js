@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const mockServer = require('../../index');
+const mockRestfulService = require('mock-restful-service');
 const routes = require('./routes');
 
 const app = express();
@@ -17,7 +17,7 @@ const serverConfig = {
     }
 }
 
-app.use(mockServer(routes, serverConfig));
+app.use(mockRestfulService(routes, serverConfig));
 
 app.listen(8002, () => {
     console.log('server now listening on 8002. Open http://localhost:8002');
