@@ -1,7 +1,7 @@
 {
   "name": "mock-restful-service",
   "version": "1.0.0",
-  "description": "A simple to use module for creating mock REST services",
+  "description": "Simple to use express middleware for creating mock REST services",
   "main": "index.js",
   "scripts": {
     "sample": "node ./samples/main/server.js",
@@ -19,6 +19,6 @@
     "express": "^4.16.2"
   },
   "keywords": [
-    "mock", "restful", "rest", "http", "api"
+    "mock", "restful", "rest", "http", "api", "express", "middleware"
   ]
 }
