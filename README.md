@@ -44,7 +44,6 @@ app.listen(8002, () => {
 | path                   | string, regex  | true        | Partial URL of request             |
 | regex                  | boolean        | false       | True if using regex for path param |
 | method                 | string         | true        | HTTP method (get, post, put, delete, etc.) |
-| regex                  | boolean        | false       | True if using regex for path param |
 | requiredFields         | Array          | false       | An array of the required fields (not applicable to get method) |
 | requiredFieldsResponse | Object         | false       | The status and the body if any of the required fields are missing |
 | defaultResponse        | Object         | true        | The status and body if none of the responseMappings are matched (see below) |
