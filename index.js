@@ -10,7 +10,7 @@ const server = (routes, config) => {
         }
 
         const log = (req, res) => {
-            if (config && config.verbose) {
+            if (!config || config.verbose === undefined || config.verbose === true) {
                 const method = req.method.toUpperCase()[req.method] || req.method.toUpperCase();
                 const path = req.path.toUpperCase();
                 const status = res.status.toString()[`s${res.status.toString()[0]}`] || res.status.toString();
@@ -22,7 +22,7 @@ const server = (routes, config) => {
         }
 
         const matchPathAndMethod = (req, route) => {
-            const methodMatch = req.method.toLowerCase() === route.method;
+            const methodMatch = req.method.toLowerCase() === route.method.toLowerCase();
             if (!methodMatch) { return false; }
             const exactPathMatch = (req.path === route.path);
             if (!exactPathMatch && !route.regex) { return false; }
