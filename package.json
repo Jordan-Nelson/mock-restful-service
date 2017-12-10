@@ -4,7 +4,7 @@
     "type" : "git", 
     "url" : "https://github.com/jrnelson333/mock-restful-service.git"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple to use express middleware for creating mock REST services",
   "main": "index.js",
   "author": "Jordan Nelson",
